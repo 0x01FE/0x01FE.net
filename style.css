@@ -103,3 +103,20 @@ header > img {
 #Contact {
     text-align: center;
 }
+
+
+#Software {
+    font-size: 15pt;
+    text-align: left;
+    padding-left: 32%;
+    padding-right: 32%;
+}
+
+
+#Software div.Header {
+    padding-top: 20pt;
+    font-size: 24pt;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
