@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
+    position: relative;
     font-family: 'IBM Plex Mono', sans-serif;
     background-color: #242424;
     color: white;
     width: 99%;
-    height: 99%;
+    height: 100%;
 }
 
 header {
@@ -19,47 +25,47 @@ header {
     border-bottom: solid .5px white;
 }
 
-img {
+header > img {
     width: 35px;
     height: 35px;
     padding-right: 5px;
 }
 
-.Home {
+.BigHome {
     color: #acaeb0;
     text-decoration: none;
 }
 
-.Home:hover {
+.BigHome:hover {
     color: green;
     text-decoration: none;
 }
 
-.Home:active {
+.BigHome:active {
     text-decoration: none;
 }
 
-.Home:link {
+.BigHome:link {
     text-decoration: none;
 }
 
-.Menu {
+#Menu {
     overflow: hidden;
     float: right;
     display: inline;
 }
 
-.Menu a {
+#Menu a {
     font-size: 15pt;
     color: #acaeb0;
     padding: 14px 16px;
 }
 
-.Menu a:hover {
+#Menu a:hover {
     color: green;
 }
 
-.Menu a.Active {
+#Menu a.Active {
     color: #a1d0ff;
 }
 
@@ -71,18 +77,29 @@ img {
     border: solid .5px white;
 }
 
-.Footer {
-    position: fixed;
+#Footer {
     bottom: 0;
+    position: absolute;
+    margin-top: 75px;
     width: 100%;
     height: 60px;
+    display: none;
 }
 
-.Footer div.Menu {
+#Footer div.Menu {
     text-align: center;
     float: none;
     display: block;
     margin: auto;
     border-top: 1px solid white;
     padding-top: 15px;
+}
+
+#Footer.Show {
+    display: block;
+}
+
+
+#Contact {
+    text-align: center;
 }
