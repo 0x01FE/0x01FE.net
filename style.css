@@ -65,7 +65,7 @@ header > img {
     color: green;
 }
 
-#Menu a.Active {
+.Active {
     color: #a1d0ff;
 }
 
@@ -109,10 +109,6 @@ header > img {
     color: green;
 }
 
-#Footer a.Active {
-    color: #a1d0ff;
-}
-
 
 #Contact {
     text-align: center;
@@ -124,7 +120,7 @@ header > img {
     text-align: left;
     padding-left: 32%;
     padding-right: 32%;
-    padding-bottom: ;
+    padding-bottom: 10pt;
 }
 
 
@@ -138,8 +134,6 @@ header > img {
 #Uses div.Header2 {
     padding-top: 10pt;
     font-size: 18pt;
-    text-decoration: underline;
-    font-weight: bold;
 }
 
 .link {
