@@ -79,11 +79,10 @@ header > img {
 
 #Footer {
     bottom: 0;
-    position: absolute;
     margin-top: 75px;
     width: 100%;
     height: 60px;
-    display: none;
+
 }
 
 #Footer div.Menu {
@@ -95,8 +94,23 @@ header > img {
     padding-top: 15px;
 }
 
+
 #Footer.Show {
     display: block;
+}
+
+#Footer a {
+    font-size: 15pt;
+    color: #acaeb0;
+    padding: 14px 16px;
+}
+
+#Footer a:hover {
+    color: green;
+}
+
+#Footer a.Active {
+    color: #a1d0ff;
 }
 
 
@@ -105,18 +119,34 @@ header > img {
 }
 
 
-#Software {
+#Uses {
     font-size: 15pt;
     text-align: left;
     padding-left: 32%;
     padding-right: 32%;
+    padding-bottom: ;
 }
 
 
-#Software div.Header {
+#Uses div.Header {
     padding-top: 20pt;
     font-size: 24pt;
     text-decoration: underline;
     font-weight: bold;
 }
 
+#Uses div.Header2 {
+    padding-top: 10pt;
+    font-size: 18pt;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.link {
+    color: #acaeb0;
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: green;
+}
