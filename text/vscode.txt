@@ -6,4 +6,5 @@ Remote - SSH,
 Synthwave '84 Blues,
 Trailing Spaces,
 Helm Intellisense,
-background
+background,
+Helium Icon Theme
