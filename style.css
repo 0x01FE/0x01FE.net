@@ -144,3 +144,20 @@ header > img {
 .link:hover {
     color: green;
 }
+
+
+#Artist {
+    font-size: 15pt;
+    text-align: left;
+    padding-left: 15%;
+    padding-bottom: 10pt;
+}
+
+
+#Artist div.Header {
+    padding-top: 20pt;
+    font-size: 24pt;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
