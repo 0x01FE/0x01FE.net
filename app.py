@@ -13,7 +13,13 @@ assets_path = "~/0x01fe.net/assets/"
 
 
 
-def keyfunc(tup :  tuple):
+
+
+def militohours(mili : int) -> int:
+    return mili/1000/60/60
+
+
+def keyfunc(tup :  tuple) -> int:
     key, d = tup
     return d['overall']
 
@@ -50,7 +56,7 @@ def media():
     for artist_tuple in data:
         artist_name, artist_info = artist_tuple
         top_ten[artist_name] = {}
-        top_ten[artist_name]["overall"] = round(artist_info["overall"]/1000/60/60, 1) # miliseconds to hours
+        top_ten[artist_name]["overall"] = round(militohours(artist_info["overall"]), 1) # miliseconds to hours
         top_ten[artist_name]["place"] = i
         i+=1
 
@@ -69,3 +75,14 @@ def about():
 @app.route('/contact')
 def contact():
     return render_template('contact.html', css_path=css_path, assets_path=assets_path)
+
+
+@app.route('/music/<artist>')
+def music(artist : str):
+
+    with open(spotify_times_path + "overall.json", 'r') as f:
+        data = json.loads(f.read())
+
+    artist_listen_time = round(militohours(data[artist]["overall"]), 1)
+
+    return render_template(f'./music/{artist}.html', css_path=css_path, assets_path=assets_path, artist_listen_time=artist_listen_time)
