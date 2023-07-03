@@ -27,7 +27,7 @@
       <div class="TopTen">
         <div class="Header2">Top Artists</div>
         {% for artist in data %}
-          <p>{{ loop.index }}. {{ artist }} : {{ data[artist] }} hours</p>
+          <p>{{ loop.index }}. {{ artist }} : {{ data[artist][0] }} hours {{ data[artist][1] }} minutes</p>
         {% endfor %}
       </div>
 
