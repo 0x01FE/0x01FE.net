@@ -1,12 +1,11 @@
 from flask import Flask, current_app, render_template, redirect
-from operator import itemgetter
 import json
 
 
 app = Flask(__name__, static_url_path='', static_folder='static')
 
 
-spotify_times_path = "/home/jackson/docker/volumes/spotify/jackson/data/"
+spotify_times_path = "/home/jackson/docker/volumes/spotify/jackson/"
 templates_path = "~/0x01fe.net/templates/"
 css_path = "~/0x01fe.net/"
 assets_path = "~/0x01fe.net/assets/"
@@ -55,12 +54,10 @@ def media():
     i = 1
     for artist_tuple in data:
         artist_name, artist_info = artist_tuple
-        top_ten[artist_name] = {}
-        top_ten[artist_name]["overall"] = round(militohours(artist_info["overall"]), 1) # miliseconds to hours
-        top_ten[artist_name]["place"] = i
+        top_ten[artist_name.replace("-", " ")] = round(militohours(artist_info["overall"]), 1) # miliseconds to hours
         i+=1
-
-    print(top_ten)
+        if i == 11:
+            break
 
     return render_template('media.html', css_path=css_path, assets_path=assets_path, data=top_ten)
 

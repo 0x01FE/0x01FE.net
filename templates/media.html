@@ -22,12 +22,15 @@
         </p>
 
       <div class="Header">Music</div>
-      <div class="Header2">Top Artists</div>
-      <p>This section shows off some of my favorite music artists, along with how I listen to the most.</p>
+      <p>This section shows off some of my favorite music artists, along with my top ten artists by listening time. I started tracking this listening data on June 30th 2023 so it isn't completly accurate.</p>
 
-      {% for artist in data %}
-        <p>{{ loop.index }}. {{ artist }} : {{ data[artist]["overall"] }} hours</p>
-      {% endfor %}
+      <div class="TopTen">
+        <div class="Header2">Top Artists</div>
+        {% for artist in data %}
+          <p>{{ loop.index }}. {{ artist }} : {{ data[artist] }} hours</p>
+        {% endfor %}
+      </div>
+
     </div>
   </body>
 </html>

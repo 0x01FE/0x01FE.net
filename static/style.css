@@ -10,6 +10,7 @@ body {
     font-family: 'IBM Plex Mono', sans-serif;
     background-color: #242424;
     color: white;
+    opacity: 0.9;
     width: 99%;
     height: 100%;
 }
@@ -161,3 +162,11 @@ header > img {
     font-weight: bold;
 }
 
+.TopTen {
+    background-color: #181818;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 5pt;
+    border-color: white;
+    padding: 20px;
+}
